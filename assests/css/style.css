@@ -27,14 +27,14 @@ header {
 }
 
 .section__container {
-  max-width: 1200px;
+  width: 100%;
   text-align: center;
 }
 
 .section__title {
   font-size: 32px; 
   font-weight: 500;
-  color: #669ccb; 
+  color: #eff5f5; 
   margin-bottom: 16px; 
   text-align: center;
 }
@@ -42,7 +42,7 @@ header {
 .section__subtitle {
   font-size: 16px; 
   font-style: italic;
-  color: #669ccb; 
+  color: #f8f9fa; 
   margin-bottom: 40px;
   text-align: center;
 }
@@ -78,29 +78,60 @@ header {
   transition: 0.3s;
 }
 
-.header__content button:hover {
-  background-color: #5681a7;
-}
 
-.journey__container {
-  background-color: #e8f1fa;
-  padding: 80px 0;
+
+.journey_container {
+  width: 100%;
+  background-color: #98b6d3;
+  padding: 50px 20px;
 }
 
 .journey__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .country__card {
+  flex: 1 1 calc(33.33% - 20px); 
+  max-width: calc(33.33% - 20px);
   background-color: #f3f4f6;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .country__card img {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
+
+/* Medium screens: Show 2 per row */
+@media (max-width: 1024px) {
+  .country__card {
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Small screens: Show 1 per row */
+@media (max-width: 768px) {
+  .country__card {
+    flex: 1 1 100%; /* 1 per row */
+    max-width: 100%;
+  }
+
+  .header__content h1 {
+    font-size: 40px;
+    padding: 5px;
+  }
+  
+  .header__content p {
+    font-size: 20px;
+  }
+}
+
 
 .country__name {
   padding: 16px;
@@ -127,9 +158,3 @@ footer {
   color: #fff;
 }
 
-
-@media (max-width: 768px) {
-  .journey__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
