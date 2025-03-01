@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 80px; 
+}
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(45, 92, 132, 0.5),
+      rgba(45, 92, 132, 0.5)
+    ),
+    url("../images/nyc_skyline.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__container {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 32px; 
+  font-weight: 500;
+  color: #669ccb; 
+  margin-bottom: 16px; 
+  text-align: center;
+}
+
+.section__subtitle {
+  font-size: 16px; 
+  font-style: italic;
+  color: #669ccb; 
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  color: #f3f4f6;
+}
+
+.header__content h1 {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+}
+
+.header__content p {
+  text-align: center;
+}
+
+.header__content button {
+  padding: 16px 32px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #669ccb;
+  color: #f3f4f6;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__content button:hover {
+  background-color: #5681a7;
+}
+
+.journey__container {
+  background-color: #e8f1fa;
+  padding: 80px 0;
+}
+
+.journey__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.country__card {
+  background-color: #f3f4f6;
+}
+
+.country__card img {
+  width: 500px;
+  height: 500px;
+}
+
+.country__name {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #767268;
+  cursor: pointer;
+}
+
+.country__name i {
+  font-size: 19.2px;
+}
+
+.country__name span {
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .journey__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
