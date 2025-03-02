@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 90px;
+  background-color: #f8f9fa;
+
+}
+
+.hero {
+  background: url("../images/empire_hero.jpg")  center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 10px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  /* max-width: 1200px; */
+  margin: 5px;
+  background-color: #f5f5dc;
+}
+
+
+.about-content {
+  width: 60%;
+}
+
+.about-content h2 {
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 16px; 
+  line-height: 1.8; 
+  color: #444; 
+  text-align: justify; 
+  margin-bottom: 20px; 
+  max-width: 900px;
+}
+
+.about-image {
+  width: 35%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.fun-facts {
+  text-align: center;
+  padding: 30px 7px;
+  background: #dcdcdc;
+}
+
+.fun-facts h2 {
+  padding-bottom: 25px;
+}
+
+.facts-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.fact-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.6; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.fact-item:hover {
+  transform: rotateY(10deg) scale(1.05); 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.fact-item i {
+  font-size: 30px;
+  color: #007bff;
+}
+
+
+.gallery {
+  background: #e9ecef;
+  padding: 50px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, 
+  box-shadow 0.3s ease-in-out;
+}
+
+
+.gallery img:hover {
+  transform: rotateY(10deg) scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+.combine_img img:hover {
+  transform: rotateX(10deg) scale(1.05);
+}
+
+.combine_img{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+
+.visit-info-data {
+  width: 100%;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #dde5f4, #b0c4de); 
+}
+
+
+.visit-info-data h2 {
+  margin-bottom: 25px;
+}
+
+.visit-card {
+  background: white;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger 3D effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.visit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.visit-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.visit-card li {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+
+.visit-card li strong {
+  color: #007bff;
+}
+
+.visit-card hr {
+  margin: 5px 0;
+}
+
+
+.visit-card a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.visit-card a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+
+  .hero h1{
+      font-size: 25px;
+  }
+
+
+  .visit-card li {
+    font-size: 14px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+  .about-content p {
+    font-size: 14px;
+  }
+  .about-image {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .fact-item {
+    width: 300px;
+  }
+}
